@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './homepageone.styles.scss';
+
 const HomePage = () => (
   <div className = 'homepage'>
     <div className = 'directory-menu'>
@@ -12,6 +14,12 @@ const HomePage = () => (
       <div className = 'menu-item'>
         <div className = 'content'>
           <h1 className = 'title'>Jackets</h1>
+          <span className = 'subtitle'>SHOP NOW</span>
+        </div>
+      </div>
+      <div className = 'menu-item'>
+        <div className = 'content'>
+          <h1 className = 'title'>Sneakers</h1>
           <span className = 'subtitle'>SHOP NOW</span>
         </div>
       </div>
