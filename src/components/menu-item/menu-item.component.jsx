@@ -14,5 +14,5 @@ const MenuItem = ({ title }) => (
 
 export default MenuItem;
 /*
-Destructuring: by using ({title}), we're simply taking title from props; same as props.title
+Destructuring: by using ({title}), we're simply taking title from props; same as 'props.title'
 */

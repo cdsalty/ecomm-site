@@ -1,5 +1,10 @@
 import React from 'react';
 
+import MenuItem from '../menu-item/menu-item.component';
+
+import './directory.styles.scss';
+
+
 class Directory extends React.Component {
   constructor() {
     super();
@@ -38,8 +43,19 @@ class Directory extends React.Component {
 // In our render, we are going to want to return what we have in our homepage
   render(){
     return(
-      <div className = 'directory-menu'></div>
+      <div className = 'directory-menu'>
+        {this.state.section.map(({title, imageUrl, id}) => (
+            <MenuItem key = {id} title = {title} />
+        ))}
+      </div>
     );
   }
 }
-// we will need a class component here
+
+export default Directory;
+
+/*
+I will need to return a div. Inside the div, map through the different sections.
+*/
+
+// call it section because each menu-item is similar to it's own section
