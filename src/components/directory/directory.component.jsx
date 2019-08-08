@@ -41,12 +41,13 @@ class Directory extends React.Component {
       ]
     };
   }
-// In our render, we are going to want to return what we have in our homepage
+// In the render, want to want to return what we have in our homepage
   render(){
     return(
       <div className = 'directory-menu'>
         { this.state.sections.map(({title, imageUrl, id}) => (
-            <MenuItem key = {id} title = {title} imageUrl={imageUrl} />
+            <MenuItem title = {title} imageUrl = {imageUrl}  key = {id} />
+            
         ))}
       </div>
     );

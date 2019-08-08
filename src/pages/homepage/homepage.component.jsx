@@ -10,7 +10,9 @@ const HomePage = () => (
 );
 
 export default HomePage;
-/* ALL OF THESE WAS *** REMOVED *** and REPLACED WITH THE DIRECTORY COMPONENT 
+
+/* 
+ALL OF BELOW WAS *** REMOVED ***  *REPLACED* WITH THE DIRECTORY COMPONENT 
   
     <div className = 'directory-menu'>
       <div className = 'menu-item'>
