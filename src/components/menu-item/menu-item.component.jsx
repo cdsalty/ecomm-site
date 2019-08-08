@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './menu-item.style.scss';
+import './menu-item.styles.scss';
 
 // CREATING OUR MENU-ITEM COMPONENT 
 const MenuItem = ({ title }) => (
@@ -16,3 +16,5 @@ export default MenuItem;
 /*
 Destructuring: by using ({title}), we're simply taking title from props; same as 'props.title'
 */
+
+// ended at 9:12sec mark

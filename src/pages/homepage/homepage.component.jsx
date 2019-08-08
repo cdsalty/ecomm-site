@@ -1,9 +1,17 @@
 import React from 'react';
+import Directory from '../../components/directory/directory.component';
 
 import './homepage.styles.scss';
 
 const HomePage = () => (
   <div className = 'homepage'>
+    <Directory />
+  </div>
+);
+
+export default HomePage;
+/* ALL OF THESE WAS *** REMOVED *** and REPLACED WITH THE DIRECTORY COMPONENT 
+  
     <div className = 'directory-menu'>
       <div className = 'menu-item'>
         <div className = 'content'>
@@ -38,5 +46,5 @@ const HomePage = () => (
     </div>
   </div>
 );
+*/
 
-export default HomePage;
