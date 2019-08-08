@@ -37,7 +37,8 @@ class Directory extends React.Component {
           imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
           size: 'large',
           id: 5
-        }]
+        }
+      ]
     };
   }
 // In our render, we are going to want to return what we have in our homepage
@@ -45,7 +46,7 @@ class Directory extends React.Component {
     return(
       <div className = 'directory-menu'>
         { this.state.sections.map(({title, imageUrl, id}) => (
-            <MenuItem key = {id} title = {title} />
+            <MenuItem key = {id} title = {title} imageUrl={imageUrl} />
         ))}
       </div>
     );
