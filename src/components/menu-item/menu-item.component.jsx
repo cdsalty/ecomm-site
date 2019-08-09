@@ -5,11 +5,11 @@ import './menu-item.styles.scss';
 
 // CREATING OUR MENU-ITEM COMPONENT 
   // - div style has prop values equal to css
-const MenuItem = ({ title, imageUrl }) => (
+const MenuItem = ({ title, imageUrl, size }) => (
   <div style = {{
     backgroundImage: `url(${imageUrl})`
   }}
-  className = 'menu-item'>
+  className = {`${size} menu-item`}  >
     <div className = 'content'>
       <h1 className = 'title'>{title}</h1>
       <span className = 'subtitle'>SHOP NOW</span>

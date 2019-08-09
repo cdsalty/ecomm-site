@@ -9,6 +9,10 @@
     margin: 0 7.5px 15px;
     background-position: center;
     background-size: cover;
+    // if our menu-item also has a class of large, then apply height of 380px
+    &.large {
+      height: 380px;
+    }
 
     &:first-child {
       margin-right: 7.5px;
