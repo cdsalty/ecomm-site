@@ -1,14 +1,18 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';  
-// withRouter is a higher order component: takes a function that takes a component as an arguement and returns a modified component. 
-
+// withRouter is a higher order component: 
+  // - meaning, it takes a function that takes a component as an arguement, and returns a modified component. 
+  // - takes a component and returns the modified version.  
+  // - similiar to a function that gives you back a 'POWERED UP COMPONENT'
 import './menu-item.styles.scss';
 
 
 // CREATING OUR MENU-ITEM COMPONENT 
   // - div style has prop values equal to css
-const MenuItem = ({ title, imageUrl, size }) => (
-  <div className = {`${size} menu-item`}>
+  // - access to history is thru withRouter and that it takes in the MenuItem component to give it more power
+const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
+  <div 
+    className = {`${size} menu-item`} onClick={() => history.push(`${match.url}${linkUrl}`)}>
     <div
       className = 'background-image'
       style = {{
@@ -24,9 +28,28 @@ const MenuItem = ({ title, imageUrl, size }) => (
 
 export default withRouter(MenuItem);
 /*
-Destructuring: by using ({title}), we're simply taking title from props; same as 'props.title'
+now that we have 'powered-up the MenuItem component, it is able to have access to those things related
+to our router. 
 
-Learned how to uppercase the title. Since javascript, any methods can be used as well.
+withRouter(MenuItem) actually returns back a super powered MenuItem that now is able to have access to the
+'LOCATION, MATCH and HISTORY' props from it's children
+
+SO BY WRAPPING 'withRouter(MenuItem),' we now have access to HISTORY
 
 */
 
+/* 
+
+- want to wrap the whole div item to an 'onClick' and then push history to some URL. HOW?
+      - we want these id's to be dynamically generated as well. 
+      - in the example we know it will be the hat's page
+ 
+Before:
+const MenuItem = ({ title, imageUrl, size, history }) => (
+  <div className = {`${size} menu-item`}>
+
+After adding onClickconst 
+const MenuItem = ({ title, imageUrl, size, history }) => (
+  <div className = {`${size} menu-item`} onClick={() => history.push()}>
+
+*/

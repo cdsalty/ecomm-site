@@ -2,19 +2,23 @@ Resources used in project:
 - React
 - Sass
 
+___________________________________________________________________________________________________________
 
 
 - Destructuring
 Instead of passing section.id, section.title, we destructure id and title
-  this.state.sections.map(section => (
-    <MenuItem key = {section.id} title = {section.title}></ MenuItem>
-  ));
+  { this.state.sections.map(({title, imageUrl, id, size, linkUrl}) => (
+    <MenuItem title = {title} imageUrl = {imageUrl}  key = {id} size = {size} linkUrl = {linkUrl} />
 
   VS (destructured)
 
   this.state.serctions.map()
+OTHER: Destructuring: by using ({title}), we're simply taking title from props; same as 'props.title'
+
+___________________________________________________________________________________________________________
 
 
+___________________________________________________________________________________________________________
   - Adding React Router:
   /*
 <Route> takes several arguements... for now, focus is on exact, path and component.
