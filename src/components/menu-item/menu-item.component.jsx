@@ -1,4 +1,6 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';  
+// withRouter is a higher order component: takes a function that takes a component as an arguement and returns a modified component. 
 
 import './menu-item.styles.scss';
 
@@ -20,7 +22,7 @@ const MenuItem = ({ title, imageUrl, size }) => (
   </div>
 );
 
-export default MenuItem;
+export default withRouter(MenuItem);
 /*
 Destructuring: by using ({title}), we're simply taking title from props; same as 'props.title'
 
