@@ -3,16 +3,17 @@ import { withRouter } from 'react-router-dom';
 // withRouter is a higher order component: 
   // - meaning, it takes a function that takes a component as an arguement, and returns a modified component. 
   // - takes a component and returns the modified version.  
-  // - similiar to a function that gives you back a 'POWERED UP COMPONENT'
+  // - similiar to a function that returns you back a 'POWERED UP COMPONENT'; here, it's the menuitem component
 import './menu-item.styles.scss';
 
 
 // CREATING OUR MENU-ITEM COMPONENT 
   // - div style has prop values equal to css
   // - access to history is thru withRouter and that it takes in the MenuItem component to give it more power
-const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
+      // (`${match.url}${linkUrl}`) match.url into linkUrl
+  const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
   <div 
-    className = {`${size} menu-item`} onClick={() => history.push(`${match.url}${linkUrl}`)}>
+    className = {`${size} menu-item`} onClick={() => history.push(`${match.url}${linkUrl}`)}> 
     <div
       className = 'background-image'
       style = {{

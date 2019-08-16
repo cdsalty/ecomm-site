@@ -30,3 +30,16 @@ Exact: is a true or false condition based on the path. It will always start as i
 
 Switch will return the very first route it matches no matter how many it matches. 
 */
+
+___________________________________________________________________________________________________________
+2 ways for passing in the linkUrl:
+
+adding linkUrl from withRouter()
+{ this.state.sections.map(({title, imageUrl, id, size, linkUrl}) => (
+    <MenuItem title = {title} imageUrl = {imageUrl}  key = {id} size = {size} linkUrl = {linkUrl} />
+))}
+ORRRRR
+{this.state.sections.map(({ title, ...restOfSectionProps }) => (
+          <MenuItem title = {title} {...restOfSectionProps} />
+
+___________________________________________________________________________________________________________

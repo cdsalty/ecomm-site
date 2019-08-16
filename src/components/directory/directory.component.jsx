@@ -50,8 +50,8 @@ class Directory extends React.Component {
   render(){
     return(
       <div className = 'directory-menu'>
-        {this.state.sections.map(({ title, ...restOfSectionProps }) => (
-          <MenuItem title = {title} {...restOfSectionProps} />
+        {this.state.sections.map(({ id, ...restOfSectionProps }) => (
+          <MenuItem key = {id} {...restOfSectionProps} />
         ))}
       </div>
     );
@@ -64,18 +64,6 @@ export default Directory;
 I will need to return a div. Inside the div, map through the different sections.
 
 Added in linkUrl to assist in routing 
-
-2 ways for passing in the linkUrl:
-
-
-adding linkUrl from withRouter()
-{ this.state.sections.map(({title, imageUrl, id, size, linkUrl}) => (
-    <MenuItem title = {title} imageUrl = {imageUrl}  key = {id} size = {size} linkUrl = {linkUrl} />
-))}
-ORRRRR
-{ this.state.sections.map(({title, imageUrl, id, size}) => (
-  <MenuItem title = {title} imageUrl = {imageUrl}  key = {id} size = {size} />
-
 
 
 */
