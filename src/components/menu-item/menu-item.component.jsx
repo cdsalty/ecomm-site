@@ -12,8 +12,7 @@ import './menu-item.styles.scss';
   // - access to history is thru withRouter and that it takes in the MenuItem component to give it more power
       // (`${match.url}${linkUrl}`) match.url into linkUrl
   const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
-  <div 
-    className = {`${size} menu-item`} onClick={() => history.push(`${match.url}${linkUrl}`)}> 
+    <div className = {`${size} menu-item`} onClick={() => history.push(`${match.url}${linkUrl}`)}> 
     <div
       className = 'background-image'
       style = {{
