@@ -10,7 +10,9 @@ const CollectionPreview = ({ title, items }) => ( // consider: 'what do you need
   <div className = 'collection-preview'>
     <h1 className = 'title'>{title.toUpperCase()}</h1>
     <div className = 'preview'>
-      {items.map((item) => (
+      {items  // Performance concern??
+        .filter((item, index) => index < 4) // filter the 'items,' and make sure each index is less than 4 items
+        .map((item) => (
         <div key={item.id}>{item.name}</div>
       ))}
     </div>

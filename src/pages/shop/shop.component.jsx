@@ -16,13 +16,14 @@ class ShopPage extends React.Component {
     // destructured collections off to limit 'this.state.collections'
     const {collections} = this.state; 
     return(<div className = 'shop-page'>
-        {
-          collections.map(({ id, ...otherCollectionProps }) => ( //originally used collection instead of ...otherCollectionProps but then desctructed it from the collection
-            <CollectionPreview key = {id} {...otherCollectionProps} />
-          ))
-        }
-      </div>);
+      {
+        collections.map(({ id, ...otherCollectionProps }) => ( //originally used collection instead of ...otherCollectionProps but then desctructed it from the collection
+          <CollectionPreview key = {id} {...otherCollectionProps} />
+        ))
+      }
+    </div>);
   }
 }
 
 export default ShopPage;
+

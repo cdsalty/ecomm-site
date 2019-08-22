@@ -43,3 +43,7 @@ ORRRRR
           <MenuItem title = {title} {...restOfSectionProps} />
 
 ___________________________________________________________________________________________________________
+
+COLLECTION ITEM (card)
+- The menu item component will consist of an image, title, price and a button to add it to the cart.
+- 
